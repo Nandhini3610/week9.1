@@ -5,22 +5,22 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Building Docker Image"
-                bat "docker build -t erum_repo:v1 ."
+                bat "docker build -t e_repo:v1 ."
             }
         }
 
         stage('Docker Login') {
             steps {
                 // Use your Docker Hub credentials
-                bat "docker login -u erumfaiz -p Erum@3005"
+            bat "docker login -u nandhini596 -p Nandhu@29"
             }
         }
 
         stage('Push Docker Image to Docker Hub') {
             steps {
                 echo "Pushing Docker Image to Docker Hub"
-                bat "docker tag erum_repo:v1 erumfaiz/erum_repo:v1"
-                bat "docker push erumfaiz/erum_repo:v1"
+                bat "docker tag e_repo:v1 nandhini596/e_repo:v1"
+                bat "docker push nandhini596/e_repo:v1"
             }
         }
 
